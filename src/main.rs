@@ -6,7 +6,7 @@ use std::io::{BufRead, BufReader, Write};
 fn main() {
     env_logger::init();
 
-    let infile = match env::args().skip(1).next() {
+    let infile = match env::args().nth(1) {
         Some(f) => f,
         None => panic!("Missing required argument: path to StorageMarketDeals.json.zst"),
     };
