@@ -1,0 +1,51 @@
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "cargo deps"
+      prefix-development: "cargo deps(dev)"
+    reviewers:
+      - "bajtos"
+      - "juliangruber"
+      - "pyropy"
+      - "NikolasHaimerl"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "npm deps"
+      prefix-development: "npm deps(dev)"
+    reviewers:
+      - "bajtos"
+      - "juliangruber"
+      - "pyropy"
+      - "NikolasHaimerl"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "ci"
+    reviewers:
+      - "bajtos"
+      - "juliangruber"
+      - "pyropy"
+      - "NikolasHaimerl"
+  - package-ecosystem: "docker"
+    directories:
+      - "/"
+    schedule:
+      interval: "daily"
+      time: "15:00"
+      timezone: "Europe/Berlin"
+
